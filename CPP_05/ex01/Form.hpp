@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 16:10:12 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/11 16:55:23 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:57:16 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FORM_HPP
 
 # include <iostream>
+# include <iomanip>
 # include <stdexcept>
 # include "Bureaucrat.hpp"
 

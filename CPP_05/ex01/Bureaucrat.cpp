@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:58:48 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/11 16:10:09 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/11 20:07:53 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void Bureaucrat::setGrade(int grade)
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
     }
     
 }
@@ -69,6 +69,18 @@ const char *Bureaucrat::GradeTooLowException::what() const throw() {return ("Gra
 
 std::ostream &operator<<(std::ostream &output, const Bureaucrat &obj)
 {
-    output << obj.getName() << " , bureaucrat grade " << obj.getGrade() << std::endl;
+    output << obj.getName() << " , bureaucrat grade " << obj.getGrade() << "."<< std::endl;
     return (output);
+}
+
+void	Bureaucrat::signForm(Form &obj){
+	try
+	{
+        obj.beSigned(*this);
+		std::cout << this->getName() << " signed " << obj.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->getName() << " couldn't sign " << obj.getName() << " because " << e.what() << std::endl;
+	}
 }

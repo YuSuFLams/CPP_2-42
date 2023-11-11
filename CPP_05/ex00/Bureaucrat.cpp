@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:58:48 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/10 23:37:11 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:42:54 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void Bureaucrat::setGrade(int grade)
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
     }
     
 }

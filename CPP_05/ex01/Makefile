@@ -10,9 +10,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-HEADER = Bureaucrat.hpp Form.cpp
+HEADER = Bureaucrat.hpp Form.hpp
 
-SRCS = main.cpp Bureaucrat.cpp Form.hpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

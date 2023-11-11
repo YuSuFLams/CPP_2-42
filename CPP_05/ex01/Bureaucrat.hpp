@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:54:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/11 16:41:56 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:39:58 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Bureaucrat
         void incrementGrade(int grade = 1);
         void decrementGrade(int grade = 1);
 
-        void signForm(const Form &obj);
+        void signForm(Form &obj);
 
         class GradeTooHighException : public std::exception
         {
