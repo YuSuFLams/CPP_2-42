@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 19:42:16 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/13 12:42:23 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:51:50 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
     {
         Bureaucrat obj("\033[0;34mAttack\033[0m", 25);
         std::cout << obj;
-        Form obj1("\033[0;31mYou!.\033[0m", 14, 112);
+        Form obj1("You!", 14, 112);
         obj.signForm(obj1);
         std::cout << obj1;
     }
@@ -34,7 +34,7 @@ int main()
     {
         Bureaucrat obj("\033[0;34mAttack\033[0m", 25);
         std::cout << obj;
-        Form obj1("\033[0;31mYou!.\033[0m", 14, 162);
+        Form obj1("You!.", 14, 162);
         obj.signForm(obj1);
         std::cout << obj1;
     }
