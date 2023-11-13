@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:58:48 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/13 12:38:04 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:24:17 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &cpy): name(cpy.name), grade(cpy.grade){
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &obj)
 {
     if (this != &obj)
-        this->setGrade(obj.getGrade());
+        setGrade(obj.getGrade());
     return (*this);
 }
 
