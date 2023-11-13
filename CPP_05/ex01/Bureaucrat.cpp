@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:58:48 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/11 20:07:53 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:38:04 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &obj)
 
 void Bureaucrat::incrementGrade(int grade)
 {
-    if (this->grade + grade > 150)
+    if (this->grade - grade < 1)
         throw Bureaucrat::GradeTooHighException();
-    this->grade += grade;
+    this->grade -= grade;
 }
 
 void Bureaucrat::setGrade(int grade)
@@ -54,9 +54,9 @@ void Bureaucrat::setGrade(int grade)
 
 void Bureaucrat::decrementGrade(int grade)
 {
-    if (this->grade - grade < 1)
+    if (this->grade + grade > 150)
         throw Bureaucrat::GradeTooLowException();
-    this->grade -= grade;
+    this->grade += grade;
 }
 
 const std::string Bureaucrat::getName( void ) const {return this->name;}
@@ -77,10 +77,10 @@ void	Bureaucrat::signForm(Form &obj){
 	try
 	{
         obj.beSigned(*this);
-		std::cout << this->getName() << " signed " << obj.getName() << std::endl;
+		std::cout << "\033[0;34m" << this->getName() << "\033[0m signed \033[0;31m" << obj.getName() << "\033[0m" << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << this->getName() << " couldn't sign " << obj.getName() << " because " << e.what() << std::endl;
+		std::cout << "\033[0;34m" << this->getName() << "\033[0m couldn't sign \033[0;31m" << obj.getName() << "\033[0m because " << e.what() << std::endl;
 	}
 }
