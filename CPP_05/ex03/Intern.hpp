@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:20:20 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/17 17:21:43 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/17 23:06:50 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Intern
         Intern &operator=(const Intern &obj);
          ~Intern();
 
-        AForm *makeForm(std::string name, std::string target);
+        AForm *makeForm(const std::string &name, const std::string &target) const;
         
         class FormNotFound : public std::exception
         {

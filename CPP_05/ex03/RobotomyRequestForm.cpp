@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:10:47 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/16 00:28:56 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/18 00:30:52 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,12 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
         throw RobotomyRequestForm::GradeTooLowException();
     else
     {
-        static int i;
+        static int i = 0;
         if (!(i & 1))
             std::cout << this->target << " has been robotomized successfully." << std::endl;
         else
             std::cout << this->target << " has not been robotomized." << std::endl;
+        i++;
     }
 }
 

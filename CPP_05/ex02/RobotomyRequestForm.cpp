@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:10:47 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/16 00:57:52 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/18 00:29:36 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,11 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
     else
     {
         static int i;
-        if (!(i & 1))
+        if (i % 2 == 0)
             std::cout << this->target << " has been robotomized successfully." << std::endl;
         else
             std::cout << this->target << " has not been robotomized." << std::endl;
+        i++;
     }
 }
 

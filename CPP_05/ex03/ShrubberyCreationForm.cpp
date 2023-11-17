@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:10:47 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/16 00:39:48 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/17 23:02:02 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
         std::string name = executor.getName() + "_shrubbery";
         std::ofstream file(name.c_str());
         if (!file.is_open())
-            std::cout << "Cannot Open This " << name << std::endl, exit(EXIT_FAILURE);
+            (std::cout << "Cannot Open This " << name << std::endl, exit(EXIT_FAILURE));
         file << "               ,@@@@@@@," << std::endl;
         file << "       ,,,.   ,@@@@@@/@@,  .oo8888o." << std::endl;
         file << "    ,&%%&%&&%,@@@@@/@@@@@@,8888\\88/8o" << std::endl;

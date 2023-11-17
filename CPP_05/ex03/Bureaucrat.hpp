@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 09:42:19 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/16 00:31:15 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/17 23:01:49 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <iomanip>
+# include <stdlib.h>
 # include <stdexcept>
 # include "AForm.hpp"
 

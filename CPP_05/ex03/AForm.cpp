@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:40:31 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/17 16:32:09 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/17 23:40:22 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ const char *AForm::GradeTooLowException::what() const throw() {return ("`AForm' 
 
 std::ostream &operator<<(std::ostream &output, const AForm &obj)
 {
-    output << "=================== AForm ===================" << std::endl;
+    output << "=================== AForm ==================" << std::endl;
     output << "|| Form name       : " << std::setw(20) << obj.getName() << ".||"<< std::endl;
     output << "|| Grade to sign   : " << std::setw(20) << obj.getGradeSigned() << ".||" << std::endl;
     output << "|| Grade to execute: " << std::setw(20) << obj.getGradeExecute()  << ".||" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:29:08 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/17 16:16:40 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/18 00:30:07 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,9 @@ int main()
         
         std::cout << from;
 
+        obj.executeForm(from);
+        obj.executeForm(from);
+        obj.executeForm(from);
         obj.executeForm(from);
 
         obj.decrementGrade(10);

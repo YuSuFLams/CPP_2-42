@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:42:32 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/17 17:30:02 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/17 23:13:24 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ AForm *Intern::ShrubberyCreation(const std::string &target) const
 
 const char *Intern::FormNotFound::what() const throw(){return "Intern : Not Found A Form";}
 
-AForm* Intern::makeForm(std::string name, std::string target)
+AForm* Intern::makeForm(const std::string &name, const std::string &target) const
 {
     AForm* (Intern::*func[])(std::string const &target) const = {
         &Intern::PresidentialPardon, 
@@ -52,8 +52,11 @@ AForm* Intern::makeForm(std::string name, std::string target)
 
     std::string array[3] = {"PresidentialPardonForm", "RobotomyRequestForm", "ShrubberyCreationForm"};
 
-    for(int i = 0; i < 3; i++)
-        if (name == array[i])
+    for(int i = 0; i < 3; i++){
+        if (name == array[i]) {
+            std::cout << "Intern creates " << name << std::endl;
             return (this->*func[i])(target);
+        }
+    }
     throw Intern::FormNotFound();
 }

@@ -1,4 +1,4 @@
-NAME = 28B
+NAME = Intern
 
 C_BLUE    = \033[0;34m
 C_YELLOW  = \033[33m
