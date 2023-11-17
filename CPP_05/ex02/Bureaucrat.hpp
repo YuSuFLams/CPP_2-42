@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 09:42:19 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/14 10:58:08 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/16 00:58:30 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include <iomanip>
+# include <stdexcept>
+# include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat
 {
@@ -26,20 +31,22 @@ class Bureaucrat
         Bureaucrat(const Bureaucrat &cpy);
         Bureaucrat &operator=(const Bureaucrat &obj);
         ~Bureaucrat();
+        
+        const std::string getName( void ) const;
+        int getGrade( void ) const;
 
         void setGrade(int grade);
-        void decrementGrade(int grade = 1);
         void incrementGrade(int grade = 1);
+        void decrementGrade(int grade = 1);
 
-        std::string getName( void ) const;
-        int getGrade( void ) const;
-        
+        void executeForm(AForm const &form);
+        void signForm(AForm &obj);
+
         class GradeTooHighException : public std::exception
         {
             public:
                 const char *what() const throw();
         };
-        
         class GradeTooLowException : public std::exception
         {
             public:
@@ -47,6 +54,6 @@ class Bureaucrat
         };
 };
 
-std::ostream &operator<<(std::ostream &ouput, const Bureaucrat &obj);
+std::ostream &operator<<(std::ostream &output, const Bureaucrat &obj);
 
 #endif

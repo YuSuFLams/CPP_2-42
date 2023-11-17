@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 22:54:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/11 19:39:58 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/11/14 09:42:19 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/11/14 12:14:41 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include <iomanip>
 # include <stdexcept>
 # include "Form.hpp"
 

@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 09:50:03 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/14 15:39:44 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/16 00:58:37 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ std::ostream &operator<<(std::ostream &output, const Bureaucrat &obj)
     return (output);
 }
 
-void	Bureaucrat::signForm(Form &obj){
+void	Bureaucrat::signForm(AForm &obj){
 	try
 	{
         obj.beSigned(*this);
@@ -83,4 +83,17 @@ void	Bureaucrat::signForm(Form &obj){
 	{
 		std::cerr << "\033[0;34m" << this->getName() << "\033[0m couldn't sign \033[0;31m" << obj.getName() << "\033[0m because " << e.what() << std::endl;
 	}
+}
+
+void	Bureaucrat::executeForm(AForm const & form){
+	try
+	{
+		form.execute(*this);
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->getName() << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
+	}
+	
 }

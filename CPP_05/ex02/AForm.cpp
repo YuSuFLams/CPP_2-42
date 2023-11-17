@@ -1,46 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:40:31 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/11/17 16:07:15 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:17:25 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-Form::Form():name("N/A"), isSigned(false), gradeSigned(1), gradeExecut(1){}
+AForm::AForm():name("N/A"), isSigned(false), gradeSigned(1), gradeExecut(1){}
 
-Form::~Form(){}
+AForm::~AForm(){}
 
-Form::Form(const std::string &name, int gradeSigned, int gradeExecut):name(name), isSigned(false), gradeSigned(gradeSigned), gradeExecut(gradeExecut)
+AForm::AForm(const std::string &name, int gradeSigned, int gradeExecut):name(name), isSigned(false), gradeSigned(gradeSigned), gradeExecut(gradeExecut)
 {
     if (this->gradeSigned < 1 || this->gradeSigned < 1)
-        throw Form::GradeTooHighException();
+        throw AForm::GradeTooHighException();
     else if (this->gradeSigned > 150 || this->gradeExecut > 150)
-        throw Form::GradeTooLowException();
+        throw AForm::GradeTooLowException();
 }
 
-Form::Form(const Form &cpy):name(cpy.getName()), isSigned(cpy.getIsSigned()), gradeSigned(cpy.getGradeSigned()), gradeExecut(cpy.getGradeExecute()) {
+AForm::AForm(const AForm &cpy):name(cpy.getName()), isSigned(cpy.getIsSigned()), gradeSigned(cpy.getGradeSigned()), gradeExecut(cpy.getGradeExecute()) {
     if (this->gradeSigned < 1 || this->gradeSigned < 1)
-        throw Form::GradeTooHighException();
+        throw AForm::GradeTooHighException();
     else if (this->gradeSigned > 150 || this->gradeExecut > 150)
-        throw Form::GradeTooLowException();
+        throw AForm::GradeTooLowException();
     *this = cpy;
 }
 
-const std::string Form::getName( void ) const {return this->name;}
+const std::string AForm::getName( void ) const {return this->name;}
 
-int Form::getIsSigned( void ) const {return this->isSigned;}
+int AForm::getIsSigned( void ) const {return this->isSigned;}
 
-int Form::getGradeSigned( void ) const {return this->gradeSigned;}
+int AForm::getGradeSigned( void ) const {return this->gradeSigned;}
 
-int Form::getGradeExecute( void ) const {return this->gradeExecut;}
+int AForm::getGradeExecute( void ) const {return this->gradeExecut;}
 
-Form & Form::operator=(const Form &obj)
+AForm & AForm::operator=(const AForm &obj)
 {
     if (this != &obj)
     {
@@ -51,21 +51,21 @@ Form & Form::operator=(const Form &obj)
     return (*this);
 }
 
-void Form::beSigned(const Bureaucrat &obj)
+void AForm::beSigned(const Bureaucrat &obj)
 {
     if (this->getGradeSigned() >= obj.getGrade())
         this->isSigned = true;
     else
-        throw Form::GradeTooLowException();
+        throw AForm::GradeTooLowException();
 }
 
-const char *Form::GradeTooHighException::what() const throw() { return ("`Form' : Grade Is Too High"); }
+const char *AForm::GradeTooHighException::what() const throw() { return ("`AForm' : Grade Is Too High"); }
 
-const char *Form::GradeTooLowException::what() const throw() {return ("`Form' : Grade Is Too Low"); }
+const char *AForm::GradeTooLowException::what() const throw() {return ("`AForm' : Grade Is Too Low"); }
 
-std::ostream &operator<<(std::ostream &output, const Form &obj)
+std::ostream &operator<<(std::ostream &output, const AForm &obj)
 {
-    output << "=================== Form ===================" << std::endl;
+    output << "=================== AForm ==================" << std::endl;
     output << "|| Form name       : " << std::setw(20) << obj.getName() << ".||"<< std::endl;
     output << "|| Grade to sign   : " << std::setw(20) << obj.getGradeSigned() << ".||" << std::endl;
     output << "|| Grade to execute: " << std::setw(20) << obj.getGradeExecute()  << ".||" << std::endl;
