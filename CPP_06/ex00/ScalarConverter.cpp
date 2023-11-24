@@ -82,7 +82,7 @@ int countComma(const std::string& str)
 
 void toFloat(std::string input)
 {
-    float value = std::stof(input);
+    float value = std::atof(input.c_str());
 
     char c = static_cast<char>(value);
     
@@ -98,7 +98,7 @@ void toFloat(std::string input)
 
 void toDouble(std::string input)
 {
-    double value = std::stod(input);
+    double value = std::atof(input.c_str());
 
     char c = static_cast<char>(value);
     
