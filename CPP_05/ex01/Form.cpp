@@ -32,7 +32,7 @@ Form::Form(const Form &cpy):name(cpy.getName()), isSigned(cpy.getIsSigned()), gr
     *this = cpy;
 }
 
-const std::string Form::getName( void ) const {return this->name;}
+const std::string &Form::getName( void ) const {return this->name;}
 
 int Form::getIsSigned( void ) const {return this->isSigned;}
 

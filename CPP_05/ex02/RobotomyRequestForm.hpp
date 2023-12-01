@@ -26,7 +26,7 @@ class RobotomyRequestForm : public AForm
         RobotomyRequestForm &operator=(const RobotomyRequestForm &cpy);
         ~RobotomyRequestForm();
 
-        std::string getTarget( void ) const;
+        std::string &getTarget( void ) const;
 
         void execute(Bureaucrat const & executor) const;
 };

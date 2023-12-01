@@ -45,4 +45,4 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
     }
 }
 
-std::string RobotomyRequestForm::getTarget( void ) const{return this->target;} 
+std::string &RobotomyRequestForm::getTarget( void ) const{return this->target;} 

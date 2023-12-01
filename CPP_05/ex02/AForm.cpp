@@ -32,7 +32,7 @@ AForm::AForm(const AForm &cpy):name(cpy.getName()), isSigned(cpy.getIsSigned()),
     *this = cpy;
 }
 
-const std::string AForm::getName( void ) const {return this->name;}
+const std::string &AForm::getName( void ) const {return this->name;}
 
 int AForm::getIsSigned( void ) const {return this->isSigned;}
 

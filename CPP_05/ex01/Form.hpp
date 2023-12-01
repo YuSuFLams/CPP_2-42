@@ -31,7 +31,7 @@ class Form
         Form &operator=(const Form &obj);
         ~Form();
 
-        const std::string getName( void ) const;
+        const std::string &getName( void ) const;
         int getIsSigned( void ) const;
         int getGradeSigned( void ) const;
         int getGradeExecute( void ) const;

@@ -59,7 +59,7 @@ void Bureaucrat::decrementGrade(int grade)
     this->grade += grade;
 }
 
-const std::string Bureaucrat::getName( void ) const {return this->name;}
+const std::string &Bureaucrat::getName( void ) const {return this->name;}
 
 int Bureaucrat::getGrade( void ) const {return this->grade;}
 
