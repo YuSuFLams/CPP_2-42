@@ -10,43 +10,44 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#pragma once
 
-# include <iostream>
+#include <iostream>
+#include <string>
 
 class Bureaucrat
 {
     private:
-        const std::string name;
-        int grade;
+        std::string const name;
+        int               grade;
+
     public:
         Bureaucrat();
-        Bureaucrat(const std::string &name, int grade);
-        Bureaucrat(const Bureaucrat &cpy);
-        Bureaucrat &operator=(const Bureaucrat &obj);
+        Bureaucrat(std::string const &name, int grade);
+        Bureaucrat(const Bureaucrat &src);
         ~Bureaucrat();
 
-        void setGrade(int grade);
-        void decrementGrade(int grade = 1);
-        void incrementGrade(int grade = 1);
+        Bureaucrat &operator=(const Bureaucrat &rhs);
 
-        std::string getName( void ) const;
-        int getGrade( void ) const;
-        
+        void        setGrade(int grade);
+
+        std::string const &getName() const;
+        int                getGrade() const;
+
+        void        incrementGrade(int grade = 1);
+        void        decrementGrade(int grade = 1);
+
         class GradeTooHighException : public std::exception
         {
             public:
-                const char *what() const throw();
+                virtual const char *what() const throw();
         };
-        
+
         class GradeTooLowException : public std::exception
         {
             public:
-                const char *what() const throw();
+                virtual const char *what() const throw();
         };
 };
 
-std::ostream &operator<<(std::ostream &ouput, const Bureaucrat &obj);
-
-#endif
+std::ostream &operator<<(std::ostream &o, Bureaucrat const &rhs);
