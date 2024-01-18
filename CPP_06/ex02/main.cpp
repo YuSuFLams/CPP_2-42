@@ -15,21 +15,25 @@
 int main()
 {
     std::cout << "\033[95m******* First Case *******\033[0m" << std::endl;
+    srand(time(NULL));
     Base *ex = generate();
     std::cout << "Ptr: " ; identify(ex);
     std::cout << "Add: " ; identify(*ex);
     
     std::cout << "\033[92m******* Second Case *******\033[0m" << std::endl;
+    srand(time(NULL));
     Base *ex1 = generate();  
     std::cout << "Ptr: " ; identify(ex1);
     std::cout << "Add: " ; identify(*ex1);
     
     std::cout << "\033[93m******* Third Case *******\033[0m" << std::endl;
+    srand(time(NULL));
     Base *ex2 = generate();  
     std::cout << "Ptr: " ; identify(ex2);
     std::cout << "Add: " ; identify(*ex2);
     
     std::cout << "\033[94m******* Fourth Case *******\033[0m" << std::endl;
+    srand(time(NULL));
     Base *ex3 = generate();  
     std::cout << "Ptr: " ; identify(ex3);
     std::cout << "Add: " ; identify(*ex3);
