@@ -26,10 +26,10 @@ typedef struct s_data
 class Serializer
 {
     private:
-    public:
         Serializer();
         Serializer(const Serializer &cpy);
         Serializer &operator=(const Serializer &obj);
+    public:
         ~Serializer();
 
         static uintptr_t serialize(Data *ptr);
