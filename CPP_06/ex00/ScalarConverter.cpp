@@ -12,7 +12,13 @@
 
 #include "ScalarConverter.hpp"
 
+ScalarConverter::ScalarConverter(){}
+
+ScalarConverter::ScalarConverter(const ScalarConverter &cpy){*this = cpy;}
+
 ScalarConverter::~ScalarConverter(){}
+
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &obj){(void)obj; return *this;}
 
 bool is_all_digit(std::string s, int flag)
 {
