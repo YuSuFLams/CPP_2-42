@@ -17,7 +17,7 @@
 # include <ctime>
 # include <unistd.h>
 
-class Base{public: virtual ~Base(){}};
+class Base{public: virtual ~Base();};
 
 class A: public Base{};
 

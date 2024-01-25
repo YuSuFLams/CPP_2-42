@@ -12,6 +12,8 @@
 
 #include "Base.hpp"
 
+Base::~Base(){}
+
 Base *generate() {
     switch (rand() % 3) {
         case 0:
