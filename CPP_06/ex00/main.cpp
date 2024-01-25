@@ -16,9 +16,11 @@ int main(int ac, char **str)
 {
     try
     {
+        if (ac != 2)
+            throw "Invalid Arguments";
         std::string input(str[1]);
-        if (ac != 2 || input.empty())
-            (std::cout << "Invalid Arguments" << std::endl, exit(EXIT_FAILURE));
+        if (input.empty())
+            throw "Invalid Arguments";
         ScalarConverter::convert(input);
     }
     catch(const std::exception& e)
