@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:04:18 by ylamsiah          #+#    #+#             */
-/*   Updated: 2024/02/06 18:27:16 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2024/02/06 18:47:11 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int main(int ac, char **av)
     }
     try
     {
-        
         isAllpos(ac, av);
         if (isSorted(ac, av))
            throw std::invalid_argument("Error: The list is already sorted.");
