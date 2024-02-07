@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:03:13 by ylamsiah          #+#    #+#             */
-/*   Updated: 2024/02/06 18:34:26 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2024/02/07 02:53:33 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <list>
 #include <deque>
 #include <ctime>
+#include <iomanip>
 
 
 bool isSorted(int ac, char **av);

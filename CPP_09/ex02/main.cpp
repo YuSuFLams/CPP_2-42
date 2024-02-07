@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:04:18 by ylamsiah          #+#    #+#             */
-/*   Updated: 2024/02/06 18:47:11 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2024/02/07 02:39:21 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ int main(int ac, char **av)
         std::cout << std::endl;
         std::cout << std::endl;
         std::cout << "Time to process a range of " << ac - 1 << \
-        " elements with std::vector : " << std::fixed << a << std::endl;
+        " elements with std::vector : " << std::fixed << std::setprecision(5) << a * 1000000 << std::endl;
         std::cout << "Time to process a range of " << ac - 1 << \
-        " elements with std::deque : " << std::fixed << a << std::endl;
+        " elements with std::deque : " << std::fixed << std::setprecision(5) << b * 1000000 << std::endl;
     }
     catch(const std::exception& e)
     {
