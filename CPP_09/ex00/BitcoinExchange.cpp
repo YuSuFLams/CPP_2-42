@@ -33,7 +33,7 @@ std::list<Pair> read_second_file(char *file1)
     while (std::getline(file, line))
     {
         Pair p;
-        p.key = line.substr(0, line.find(" "));
+        p.key = line.substr(0, line.find("|"));
         p.key.erase(0, p.key.find_first_not_of(" \t\n\r\f\v"));
         p.key.erase(p.key.find_last_not_of(" \t\n\r\f\v") + 1);
         p.value = line.substr(line.find("|") + 1);
